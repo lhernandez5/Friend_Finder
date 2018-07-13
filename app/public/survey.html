@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <h2>FriendFinder Survey Questions</h2>
+                <hr>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <h3>About You
+                    <h3>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10">
+                <form role="form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name(Required)</label>
+                        <input type="name" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">photo</label>
+                        <input type="file" class="form-control-file" id="photo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="question_1">Your mind is always buzzing with unexplored ideas and plans.</label>
+                        <select class="form-control" id="question_1" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_2">Generally speaking, you rely more on your experience than your imagination.</label>
+                        <select class="form-control" id="question_2" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
+                        <select class="form-control" id="question_3" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_4">You rarely do something just out of sheer curiosity.</label>
+                        <select class="form-control" id="question_4" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_5">People can rarely upset you.</label>
+                        <select class="form-control" id="question_5" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_6">It is often difficult for you to relate to other people’s feelings.</label>
+                        <select class="form-control" id="question_6" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_7">In a discussion, truth should be more important than people’s sensitivities.</label>
+                        <select class="form-control" id="question_7" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_8">You rarely get carried away by fantasies and ideas.</label>
+                        <select class="form-control" id="question_8" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_9">You think that everyone’s views should be respected regardless of whether they are supported by facts
+                            or not.</label>
+                        <select class="form-control" id="question_9" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question_10">You feel more energetic after spending time with a group of people.</label>
+                        <select class="form-control" id="question_10" style="width: 20%">
+                            <option value="">Select an option</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-primary mb-2" style="width: 100%">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-1">
+                <div id="stuff"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Question: What does this code do?
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            var friends = [];
+            var scores = [];
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#question_1").val(),
+                    $("#question_2").val(),
+                    $("#question_3").val(),
+                    $("#question_4").val(),
+                    $("#question_5").val(),
+                    $("#question_6").val(),
+                    $("#question_7").val(),
+                    $("#question_8").val(),
+                    $("#question_9").val(),
+                    $("#question_10").val()
+                ]
+            };
+            friends.push(newFriend);
+            $.post("/api/friends", newFriend).then(function (data) {
+                alert("Adding Friend...");
+            });
+
+            $.get("/api/friends", function (data) {
+                // console.log(data);
+                if (data) {
+                    return res.json(data);
+                }
+            });
+            // var fs = require("fs");
+            // var textFile = "../data/friends.js";
+            // function writeToFile(data) {
+            //     fs.appendFile(textFile, data, function (err) {
+            //         if (err) {
+            //             return console.log(err);
+            //         }
+            //         console.log("\nCONTENT ADDED TO log.txt!\n");
+            //     });
+            // }
+            // writeToFile(data);
+        });
+    </script>
+    <!-- <script type="text/javascript" src="../data/friends.js"></script> -->
+
+</body>
+
+</html>
