@@ -40,19 +40,18 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-10">
-                <form role="form" method="POST">
+                <form role="form" method="POST" action="/survey">
                     <div class="form-group">
                         <label for="name">Name(Required)</label>
-                        <input type="name" class="form-control" id="name">
+                        <input type="name" class="form-control required" id="name">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlFile1">photo</label>
-                        <input type="file" class="form-control-file" id="photo">
+                        <input type="text" id="photo" class="form-control" required="">
                     </div>
-
                     <div class="form-group">
                         <label for="question_1">Your mind is always buzzing with unexplored ideas and plans.</label>
-                        <select class="form-control" id="question_1" style="width: 20%">
+                        <select class="form-control required required" id="question_1" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -63,7 +62,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_2">Generally speaking, you rely more on your experience than your imagination.</label>
-                        <select class="form-control" id="question_2" style="width: 20%">
+                        <select class="form-control required required" id="question_2" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -74,7 +73,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                        <select class="form-control" id="question_3" style="width: 20%">
+                        <select class="form-control required required" id="question_3" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -85,7 +84,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_4">You rarely do something just out of sheer curiosity.</label>
-                        <select class="form-control" id="question_4" style="width: 20%">
+                        <select class="form-control required" id="question_4" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -96,7 +95,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_5">People can rarely upset you.</label>
-                        <select class="form-control" id="question_5" style="width: 20%">
+                        <select class="form-control required" id="question_5" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -107,7 +106,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_6">It is often difficult for you to relate to other people’s feelings.</label>
-                        <select class="form-control" id="question_6" style="width: 20%">
+                        <select class="form-control required" id="question_6" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -118,7 +117,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_7">In a discussion, truth should be more important than people’s sensitivities.</label>
-                        <select class="form-control" id="question_7" style="width: 20%">
+                        <select class="form-control required" id="question_7" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -129,7 +128,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_8">You rarely get carried away by fantasies and ideas.</label>
-                        <select class="form-control" id="question_8" style="width: 20%">
+                        <select class="form-control required" id="question_8" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -141,7 +140,7 @@
                     <div class="form-group">
                         <label for="question_9">You think that everyone’s views should be respected regardless of whether they are supported by facts
                             or not.</label>
-                        <select class="form-control" id="question_9" style="width: 20%">
+                        <select class="form-control required" id="question_9" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -152,7 +151,7 @@
                     </div>
                     <div class="form-group">
                         <label for="question_10">You feel more energetic after spending time with a group of people.</label>
-                        <select class="form-control" id="question_10" style="width: 20%">
+                        <select class="form-control required" id="question_10" style="width: 20%">
                             <option value="">Select an option</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -165,58 +164,65 @@
                 </form>
             </div>
             <div class="col-md-1">
-                <div id="stuff"></div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Match</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="matchName"></p>
+                        <br>
+                        <div id="matchPhoto"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
-        // Question: What does this code do?
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            var friends = [];
-            var scores = [];
-            var newFriend = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val(),
-                scores: [
-                    $("#question_1").val(),
-                    $("#question_2").val(),
-                    $("#question_3").val(),
-                    $("#question_4").val(),
-                    $("#question_5").val(),
-                    $("#question_6").val(),
-                    $("#question_7").val(),
-                    $("#question_8").val(),
-                    $("#question_9").val(),
-                    $("#question_10").val()
-                ]
-            };
-            friends.push(newFriend);
-            $.post("/api/friends", newFriend).then(function (data) {
-                alert("Adding Friend...");
-            });
+        $(document).ready(function () {
+            $("#submit").on("click", function (event) {
+                event.preventDefault();
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#question_1").val(),
+                        $("#question_2").val(),
+                        $("#question_3").val(),
+                        $("#question_4").val(),
+                        $("#question_5").val(),
+                        $("#question_6").val(),
+                        $("#question_7").val(),
+                        $("#question_8").val(),
+                        $("#question_9").val(),
+                        $("#question_10").val()
+                    ]
+                };
+                $.post("/api/friends", newFriend).then(function (data) {
+                    if (data) {
+                        $('#myModal').modal('show');
+                        $('#matchName').show();
+                        $('#matchName').text(data.matchName);
+                        $('#matchPhoto').html('<img src="'+data.matchPhoto+'" width="400"/>');
+                        // '<img src="'+data.matchPhoto+'" />'
+                    }
+                });
+                $.get("/api/friends", newFriend).then(function (data) {
 
-            $.get("/api/friends", function (data) {
-                // console.log(data);
-                if (data) {
-                    return res.json(data);
-                }
+                });
+
             });
-            // var fs = require("fs");
-            // var textFile = "../data/friends.js";
-            // function writeToFile(data) {
-            //     fs.appendFile(textFile, data, function (err) {
-            //         if (err) {
-            //             return console.log(err);
-            //         }
-            //         console.log("\nCONTENT ADDED TO log.txt!\n");
-            //     });
-            // }
-            // writeToFile(data);
         });
     </script>
-    <!-- <script type="text/javascript" src="../data/friends.js"></script> -->
-
 </body>
 
 </html>
