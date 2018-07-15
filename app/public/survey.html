@@ -158,10 +158,15 @@
                             <option value="4">4</option>
                             <option value="5">5 (strongly agree)</option>
                         </select>
-                    </div><br><br>
-                    <center><button id="submit" type="submit" class="btn btn-primary mb-2" style="width: 50%">Submit</button></center>
+                    </div>
+                    <br>
+                    <br>
+                    <center>
+                        <button id="submit" type="submit" class="btn btn-primary mb-2" style="width: 50%">Submit</button>
+                    </center>
                 </form>
-                <br><br>
+                <br>
+                <br>
             </div>
             <div class="col-md-1">
             </div>
@@ -212,7 +217,7 @@
                         $('#myModal').modal('show');
                         $('#matchName').show();
                         $('#matchName').text(data.matchName);
-                        $('#matchPhoto').html('<img src="'+data.matchPhoto+'" width="400"/>');
+                        $('#matchPhoto').html('<img src="' + data.matchPhoto + '" width="400"/>');
                     }
                 });
             });

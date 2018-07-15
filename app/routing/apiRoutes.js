@@ -64,7 +64,7 @@ module.exports = (function() {
         console.log(intScores + " equal " + friendsMinusOne[k]);
         newArr_1.push(intScores);
       }
-      console.log("newArr " + newArr); 
+      console.log("newArr " + newArr);
       console.log("this newArr_1 " + newArr_1);
 
       for (var i = 0; i < newArr_1.length; i++) {
@@ -77,7 +77,7 @@ module.exports = (function() {
       var minIndex = sumDiff.indexOf(min);
       console.log(minIndex);
       matchName = friends[minIndex].name;
-      matchPhoto=friends[minIndex].photo;
+      matchPhoto = friends[minIndex].photo;
       console.log(
         "You made a match with :" +
           matchName +
@@ -85,8 +85,10 @@ module.exports = (function() {
           min
       );
     }
-    match = { matchName: matchName,
-              matchPhoto: matchPhoto};
+    match = {
+      matchName: matchName,
+      matchPhoto: matchPhoto
+    };
     if (match) {
       res.json(match);
     }
