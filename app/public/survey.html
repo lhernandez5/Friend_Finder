@@ -175,13 +175,13 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Match</h5>
+                        <h5 class="modal-title">Your Match</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p id="matchName"></p>
+                        <h2><p id="matchName"></p></h2>
                         <br>
                         <div id="matchPhoto"></div>
                     </div>
@@ -213,12 +213,12 @@
                     ]
                 };
                 $.post("/api/friends", newFriend).then(function (data) {
-                    if (data) {
+                    // if (data) {
                         $('#myModal').modal('show');
                         $('#matchName').show();
                         $('#matchName').text(data.matchName);
                         $('#matchPhoto').html('<img src="' + data.matchPhoto + '" width="400"/>');
-                    }
+                    // }
                 });
             });
         });
