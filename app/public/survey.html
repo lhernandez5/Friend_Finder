@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>FriendFinder</title>
-    <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -181,7 +180,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h2><p id="matchName"></p></h2>
+                        <h2>
+                            <p id="matchName"></p>
+                        </h2>
                         <br>
                         <div id="matchPhoto"></div>
                     </div>
@@ -213,12 +214,10 @@
                     ]
                 };
                 $.post("/api/friends", newFriend).then(function (data) {
-                    // if (data) {
-                        $('#myModal').modal('show');
-                        $('#matchName').show();
-                        $('#matchName').text(data.matchName);
-                        $('#matchPhoto').html('<img src="' + data.matchPhoto + '" width="400"/>');
-                    // }
+                    $('#myModal').modal('show');
+                    $('#matchName').show();
+                    $('#matchName').text(data.matchName);
+                    $('#matchPhoto').html('<img src="' + data.matchPhoto + '" width="400"/>');
                 });
             });
         });
