@@ -1,3 +1,9 @@
-select.form-control.required.required{
-    width: 32% !important;
+select.form-control.required.required {
+  width: 32% !important;
 }
+
+/* @media only screen and (max-width: 900px) {
+  select.form-control.required.required {
+    width: 60% !important;
+  }
+} */
